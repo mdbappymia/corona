@@ -51,3 +51,11 @@ input[type="text"] {
   background-color: DodgerBlue !important;
   color: #ffffff;
 }
+#container div {
+  font-size: 30px;
+  border: 2px solid black;
+}
+.allCountryName {
+  font-size: 40px !important;
+  color: green;
+}
