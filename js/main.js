@@ -39,9 +39,9 @@ axios.get(BASE_URL)
         function allCountrySet(c) {
             const menu = document.querySelector('#container');
             menu.appendChild(createMenuItem("Country Name: " + c.Country)).className = 'allCountryName';
-            menu.appendChild(createMenuItem("New Confirmed: " + c.NewConfirmed)).className = 'allCountryTTCase';
-            menu.appendChild(createMenuItem("New Deaths: " + c.NewDeaths)).className = 'allCountryTTDeaths';
-            menu.appendChild(createMenuItem("New Recovered: " + c.NewRecovered)).className = 'allCountryTTRecovered';
+            menu.appendChild(createMenuItem("New Confirmed: " + c.NewConfirmed)).className = 'allCountryTTCase bg-warning';
+            menu.appendChild(createMenuItem("New Deaths: " + c.NewDeaths)).className = 'allCountryTTDeaths bg-danger';
+            menu.appendChild(createMenuItem("New Recovered: " + c.NewRecovered)).className = `allCountryTTRecovered bg-success`;
             menu.appendChild(createMenuItem("Total Confirmed: " + c.TotalConfirmed)).className = 'allCountryTTCase';
             menu.appendChild(createMenuItem("Total Deaths: " + c.TotalDeaths)).className = 'allCountryTDeadts';
             menu.appendChild(createMenuItem("Total Recovered: " + c.TotalRecovered)).className = 'allCountryTRecovered';

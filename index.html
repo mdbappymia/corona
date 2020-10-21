@@ -12,13 +12,19 @@
     <div class="container">
         <div class="jumbotron">
             <h1 class="display-4">World Corona Update</h1>
-            <h2 id="date"></h2>
+            <h3 id="date">
+              <script >
+                var d = new Date();
+                
+                document.write(d)
+              </script>
+            </h3>
             <hr class="my-4">
             <p class="lead">Enter your country</p>
             <input type="text" id="input-country">
-            <small>
+            <p>
               Press Enter key to find your country corona update.
-            </small>
+            </p>
           </div>
     </div>
     <div class="container">
@@ -28,13 +34,13 @@
 
         
 
-        <h1 class="t-t-case-h">Today Total Case</h1>
+        <h1 class="h1 t-t-case-h">Today Total Case</h1>
         <div class="t-t-case" id="t-t-case"></div>
 
-        <h1 class="t-t-death-h">Today Total Death</h1>
+        <h1 class="h1 t-t-death-h">Today Total Death</h1>
         <div class="t-t-death" id="t-t-death"></div>
 
-        <h1 class="t-t-recover-h">Today Total Recover</h1>
+        <h1 class="h1 t-t-recover-h">Today Total Recover</h1>
         <div class="t-t-recover" id="t-t-recover"></div>
       </div>
       <!--Total-->
@@ -42,13 +48,13 @@
 
         
 
-        <h1 class="total-case-h">Total Case</h1>
+        <h1 class="h1 total-case-h">Total Case</h1>
         <div class="total-case" id="total-case"></div>
 
-        <h1 class="total-death-h">Total Dath</h1>
+        <h1 class="h1 total-death-h">Total Dath</h1>
         <div class="total-dath" id="total-death"></div>
 
-        <h1 class="total-recover-h">Total Recover</h1>
+        <h1 class="h1 total-recover-h">Total Recover</h1>
         <div class="total-recover" id="total-recover"></div>
       </div>
       

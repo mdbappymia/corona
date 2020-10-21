@@ -1,6 +1,9 @@
 body {
   background-color: #e9ecef;
 }
+.h1 {
+  font-size: 20px;
+}
 .country-name {
   font-size: 60px;
 }
