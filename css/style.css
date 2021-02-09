@@ -2,12 +2,32 @@ body {
   background-color: #e9ecef;
 }
 .h1 {
-  font-size: 20px;
+  font-size: 25px;
+  float: left;
+  font-weight: 600;
+  width: 50%;
+  text-align: left;
+}
+.b {
+  font-size: 25px;
 }
 .country-name {
   font-size: 60px;
 }
-
+.t-total-case {
+  width: 70%;
+  border: 1px solid black;
+  padding: 25px;
+  margin: auto;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+}
+.taday {
+}
+.t-t-case-h {
+  float: left;
+}
 * {
   box-sizing: border-box;
 }
@@ -61,4 +81,15 @@ input[type="text"] {
 .allCountryName {
   font-size: 40px !important;
   color: green;
+}
+@media only screen and (max-width: 800px) {
+  .t-total-case {
+    width: 100%;
+  }
+  .b {
+    font-size: 18px;
+  }
+  .h1 {
+    font-size: 18px;
+  }
 }
