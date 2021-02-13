@@ -7,6 +7,9 @@
   padding: 0;
   border: 1px solid black;
 }
+.autocomplete-items{
+  color: #000;
+}
 .data-font{
   font-size: 25px;
   overflow-x: scroll;
