@@ -27,15 +27,35 @@ axios.get(BASE_URL)
         var temp = []
         for (var i = 0; i < arr.length; i++) {
             allCountrySet(arr[i])
+            console.log(arr[i].Country)
             temp.push(arr[i].Country)
+            
         }
         var countries = temp
+
         function createMenuItem(name) {
             let li = document.createElement('div');
             li.textContent = name;
             return li;
         }
         function allCountrySet(c) {
+            const menuc = document.querySelector('#countrydd');
+            menuc.appendChild(createMenuItem(c.Country)).className="c-border";
+            const menunc = document.querySelector('#new-confirmed');
+            menunc.appendChild(createMenuItem(c.NewConfirmed)).className ='c-border';
+            const menund = document.querySelector('#new-deaths');
+            menund.appendChild(createMenuItem(c.NewDeaths)).className ='c-border';
+            const menunr = document.querySelector('#new-recovered');
+            menunr.appendChild(createMenuItem(c.NewRecovered)).className ='c-border';
+            const menutc = document.querySelector('#total-confirmed');
+            menutc.appendChild(createMenuItem(c.TotalConfirmed)).className ='c-border';
+            const menutd = document.querySelector('#total-deaths');
+            menutd.appendChild(createMenuItem(c.TotalDeaths)).className ='c-border';
+            const menutr = document.querySelector('#total-recovered');
+            menutr.appendChild(createMenuItem(c.TotalRecovered)).className ='c-border';
+
+
+
             const menu = document.querySelector('#container');
             menu.appendChild(createMenuItem("Country Name: " + c.Country)).className = 'allCountryName';
             menu.appendChild(createMenuItem("New Confirmed: " + c.NewConfirmed)).className = 'allCountryTTCase bg-warning';
@@ -167,7 +187,7 @@ axios.get(BASE_URL)
         //auto complate//
     })
     .catch(e => {
-        console.log(e)
+        console.log(countries)
     })
 
 
@@ -199,4 +219,49 @@ var allTotalCase = document.getElementById('a-total-case')
 var allCountry = document.getElementById('all-country')
 
 
+$(function () {
+    $('[data-toggle="tooltip"]').tooltip()
+  })
 
+
+
+
+  var checkbox = document.getElementById("ChangeTheme"); //get the checkbox to a variable
+
+//check storage if dark mode was on or off
+if (sessionStorage.getItem("mode") == "dark") {
+  darkmode(); //if dark mode was on, run this funtion
+} else {
+  nodark(); //else run this funtion
+}
+
+//if the checkbox state is changed, run a funtion
+checkbox.addEventListener("change", function() {
+  //check if the checkbox is checked or not
+  if (checkbox.checked) {
+    darkmode(); //if the checkbox is checked, run this funtion
+  } else {
+    nodark(); //else run this funtion
+  }
+});
+
+//function for checkbox when checkbox is checked
+function darkmode() {
+  document.body.classList.add("dark-mode");
+  document.body.classList.add("dark-mode") //add a class to the body tag
+  checkbox.checked = true; //set checkbox to be checked state
+  sessionStorage.setItem("mode", "dark"); //store a name & value to know that dark mode is on
+}
+
+//function for checkbox when checkbox is not checked
+function nodark() {
+  document.body.classList.remove("dark-mode"); //remove added class from body tag
+  checkbox.checked = false; //set checkbox to be unchecked state
+  sessionStorage.setItem("mode", "light"); //store a name & value to know that dark mode is off or light mode is on
+}
+
+
+setInterval(function(){
+    let d = document.getElementById('date')
+    d.innerHTML=(new Date())
+  },1000);

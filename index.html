@@ -14,12 +14,24 @@
     <div class="container">
       <div class="jumbotron">
         <h1 class="display-4">World Corona Update</h1>
-        <h3 id="date">
-          <script>
-            var d = new Date();
 
-            document.write(d);
-          </script>
+
+
+          <div class="corner">
+<!-- Input checkbox for add or remove class from body with an id -->
+<label for="ChangeTheme">
+  <input type="checkbox" id="ChangeTheme" /> <span class="slide"></span>
+</label>
+<div class="txt">
+  <p><b>White</b></p>
+  <p><b>Dark</b></p>
+</div>
+        
+
+
+
+        </div>
+        <h3 id="date">
         </h3>
         <hr class="my-4" />
         <p class="lead">Enter your country</p>
@@ -60,12 +72,32 @@
         </div>
       </div>
     </div>
-
-    <div class="col-md-3"></div>
-
-    <div class="container" id="container"></div>
+    <div class="all-data">
+<div class="container-b data-font">
+    <div class="row bg-primary">
+      <div class="col-3 pp-0" >Country Name:</div>
+      <div class="col-1b pp-0" >New Confirmed:</div>
+      <div class="col-1b pp-0" >New Deaths:</div>
+      <div class="col-1b pp-0" >New Recovered</div>
+      <div class="col-1b pp-0" >Total Confirmed</div>
+      <div class="col-1b pp-0" >Total Deaths</div>
+      <div class="col-1b pp-0" >Total Recovered</div>
+    </div>
+    <div class="row">
+      <div class="col-3 pp-0" id="countrydd" data-toggle="tooltip" data-placement="top" title="Country"></div>
+      <div class="col-1b pp-0" id="new-confirmed" data-toggle="tooltip" data-placement="top" title="New Confirmed"></div>
+      <div class="col-1b pp-0" id="new-deaths" data-toggle="tooltip" data-placement="top" title="New Deaths"></div>
+      <div class="col-1b pp-0" id="new-recovered" data-toggle="tooltip" data-placement="top" title="New Recovered"></div>
+      <div class="col-1b pp-0" id='total-confirmed' data-toggle="tooltip" data-placement="top" title="Total Confirmed"></div>
+      <div class="col-1b pp-0" id='total-deaths' data-toggle="tooltip" data-placement="top" title="Total Deaths"></div>
+      <div class="col-1b pp-0" id="total-recovered" data-toggle="tooltip" data-placement="top" title="Total Recovered"></div>
+    </div>
+  </div>
+</div>
+    <div class="container d-none" id="container"></div>
 
     <!--Js Link-->
+    
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>

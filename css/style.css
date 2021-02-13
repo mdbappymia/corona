@@ -1,5 +1,39 @@
+*{
+  margin: 0;
+  padding: 0;
+}
+.pp-0{
+  margin: 0;
+  padding: 0;
+  border: 1px solid black;
+}
+.data-font{
+  font-size: 25px;
+  overflow-x: scroll;
+}
+.container-b{
+  width: 1224px !important;
+  padding: 0 30px;
+  margin: auto;
+  overflow: scroll !important;
+}
+
+.sticky {
+  position: sticky;
+    top: 0;
+  
+}
+
+.container-b::-webkit-scrollbar {
+  display: none;
+}
+.sticky::-webkit-scrollbar{
+  display: none;
+}
 body {
   background-color: #e9ecef;
+  height: 100vh;
+  color: #000;
 }
 .h1 {
   font-size: 25px;
@@ -23,6 +57,17 @@ body {
   display: flex;
   align-items: center;
 }
+#countrydd{
+  border: 1px solid black;
+}
+.c-border{
+  border: 1px solid black;
+  overflow-x: scroll;
+  height: 50px;
+}
+.c-border::-webkit-scrollbar{
+  display: none;
+}
 .t-t-case-h {
   float: left;
 }
@@ -41,6 +86,8 @@ input {
   border: 1px solid transparent;
   background-color: #f1f1f1;
   padding: 10px;
+  border: 1px solid black;
+  margin-bottom: 4px;
   font-size: 16px;
 }
 input[type="text"] {
@@ -90,4 +137,100 @@ input[type="text"] {
   .h1 {
     font-size: 18px;
   }
+}
+.col-1b {
+  width: 148px !important;
+}
+.all-data{
+  width: 100%;
+  overflow: scroll;
+  overflow-x: scroll;
+  margin: auto;
+}
+
+
+
+.corner{
+  float: right;
+  padding: 20px;
+}
+
+
+
+
+
+
+
+
+
+
+h1 {
+  color: rgb(1, 172, 240);
+  text-align: center;
+}
+/* if dark-mode class is not added set this background */
+body {
+  background: rgb(237, 238, 238);
+  transition: 0.5s;
+}
+#ChangeTheme {
+  width: 0;
+  height: 0;
+  opacity: 0;
+}
+label {
+  display: block;
+  height: 15px;
+  width: 60px;
+  position: relative;
+  transform: rotate(90deg) translate(50px, 100px);
+}
+span.slide {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: #dadada;
+  border-radius: 30px;
+}
+span.slide:before {
+  position: absolute;
+  content: "";
+  height: 20px;
+  width: 20px;
+  background: #fff;
+  border-radius: 50%;
+  top: -2px;
+  left: 0px;
+  transition: 0.5s;
+  box-shadow: rgba(0, 0, 0, 0.21) 0px 0px 7px 1px;
+}
+.txt {
+  position: relative;
+  transform: translatex(-50px);
+}
+.txt p:nth-child(1) {
+  color: grey;
+  font-weight: bold;
+  font-size: 1.1em;
+  transition: 0.5s;
+}
+#ChangeTheme:checked + span.slide:before {
+  transform: translatex(40px);
+}
+/* if dark-mode class is added set this background */
+body.dark-mode {
+  background: #353535 !important;
+  color: #d4d4d4fd;
+}
+.jumbotron {
+  background: none;
+}
+
+.dark-mode .txt p:nth-child(1) {
+  color: #000;
+  font-weight: normal;
+}
+.dark-mode .txt p:nth-child(2) {
+  color: grey;
+  font-weight: bold;
 }
